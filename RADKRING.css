@@ -8,6 +8,7 @@
 /* No changes needed for .nav-links and .nav-links li classes */
 
 body {
+  font-size: 16px; /* Base font size */
   /* Set background properties for the image */
   height: 100%; /* Ensures viewport fills entire window */
   margin: 0; /* Remove default margins */
@@ -19,6 +20,18 @@ body {
   padding: 0; /* Remove default padding from body */ /* Set body height to 100 viewport height */
   font-family: Arial, sans-serif; /* Optional font styling */
 }
+
+
+
+.container {
+  width: 80%; /* 80% of viewport width */
+  margin: 0 auto; /* Center the container horizontally */
+}
+
+h1 {
+  font-size: 2.5vw; /* Font size scales with viewport width */
+}
+
 
 
 
@@ -113,3 +126,27 @@ body {
     /* Removes default text color */
     -webkit-text-fill-color: transparent;
   }
+
+  /* Styles for screens wider than 768px */
+@media (min-width: 768px) {
+  .container {
+    width: 60%; /* Adjust layout for larger screens */
+  }
+}
+
+/* Styles for screens between 480px and 767px */
+@media (min-width: 480px) and (max-width: 767px) {
+  h1 {
+    font-size: 3vw; /* Adjust font size for medium screens */
+  }
+}
+
+/* Styles for screens less than 480px */
+@media (max-width: 479px) {
+  .container {
+    width: 90%; /* Adjust layout for smaller screens */
+  }
+  p {
+    font-size: 14px; /* Adjust font size for readability */
+  }
+}
