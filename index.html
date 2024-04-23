@@ -1,221 +1,328 @@
-
-<!doctype html>
-<html lang="utf-8" data-bs-theme="auto">
-  <head><script src="./RADKRING.js"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.122.0">
-    <title>RAD KRING</title>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RAD KRING</title>
+<link rel="icon" href="./favicon_io/favicon.ico" type="image/x-icon">
+<!-- Bootstrap CSS -->
+<link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+<style>
   
-    <link rel="shortcut icon" href="./favicon_io/favicon.ico" href="./favicon_io/favicon.ico"  type="image/x-icon">
+  @keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/product/">
 
+  
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+   
+    background-size: cover; /* or 'contain' */
+    background-position: center;
+    background-repeat: no-repeat;
     
+  }
 
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@docsearch/css@3">
+  .navbar {
+    display: flex;
+    justify-content: space-between; /* Centers content horizontally within navbar */
+    align-items: center; /* Aligns content vertically within navbar */
+    padding: 10px 20px;
+    background-color: rgba(0, 0, 0, 0.062); /* Replace with your image path */
+  background-repeat: no-repeat; /* Prevents image tiling */
+  background-position: center; /* Positions image at the center */
+  background-size: cover; /* Scales image to cover the navbar area */
+  padding: 10px 20px; /* Adjust padding as needed */
+  /* Other navbar styles (optional) */
+  display: flex; /* For horizontal alignment of content (optional) */
+  justify-content: space-between; /* Distributes content horizontally (optional) */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100px;
+    z-index: 10;
+  }
+  
+  /* Remove previous logo styles from .logo class */
+.logo {
+    position: fixed;  /* Positions the logo absolutely within the viewport */
+      /* Vertically centers the logo at 50% of viewport height */
+    left: 50%;   /* Horizontally centers the logo at 50% of viewport width */
+    transform: translate(-50%, -50%);  /* Adjusts positioning based on half its width/height */
+    height: 100px; /* Adjust logo height as needed */
+    width: auto;  /* Adjust logo width proportionally */
+  }
 
-<link href="./RADKRING.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  .logo1 {
+    position: fixed;  /* Positions the logo absolutely within the viewport */
+      /* Vertically centers the logo at 50% of viewport height */
+    left: 15%;   /* Horizontally centers the logo at 50% of viewport width */
+    transform: translate(-50%, -50%);  /* Adjusts positioning based on half its width/height */
+    height: 100px; /* Adjust logo height as needed */
+    width: auto;
+  }
+  
+  
+  .gradient-text {
+    /* Set background properties for the gradient */
+    background-image: url(./Radkring.logos/burnt-orange-background-1000-x-1250-p5kbwzx42ef1ajqd.jpg);
+    background-position: center; /* Positions image at the center */
+  background-size: cover; /* Scales image to cover the navbar area */
+  padding: 10px 20px; /* 
+    /* Ensures background covers the entire text content */
+    background-clip: text;
+    /* Removes default text color */
+    -webkit-text-fill-color: transparent;
+  }
 
-    <!-- Favicons -->
-<link rel="apple-touch-icon" href="/docs/5.3/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
-<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
-<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
-<link rel="manifest" href="/docs/5.3/assets/img/favicons/manifest.json">
-<link rel="mask-icon" href="/docs/5.3/assets/img/favicons/safari-pinned-tab.svg" color="#712cf9">
-<link rel="icon" href="/docs/5.3/assets/img/favicons/favicon.ico">
-<meta name="theme-color" content="#712cf9">
+  .gradient-text-2 {
+    /* Set background properties for the gradient */
+    background-image: url(./Radkring.logos/pngtree-abstract-texture-gradient-yellow-orange-background-picture-image_1455574.jpg);
+    background-position: center; /* Positions image at the center */
+  background-size: cover; /* Scales image to cover the navbar area */
+  padding: 10px 20px; /* 
+    /* Ensures background covers the entire text content */
+    background-clip: text;
+    /* Removes default text color */
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .gradient-text-3 {
 
+    /* Set background properties for the gradient */
+    background-image: url(./Radkring.logos/wallpaperflare.com_wallpaper\ \(1\).jpg);
+    background-position: center; /* Positions image at the center */
+  background-size: cover; /* Scales image to cover the navbar area */
+  padding: 10px 20px; /* 
+    /* Ensures background covers the entire text content */
+    background-clip: text;
+    /* Removes default text color */
+    -webkit-text-fill-color: transparent;
+  }
 
-    <style>
-      .bd-placeholder-img {
-        font-size: 1.125rem;
-        text-anchor: middle;
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        user-select: none;
-      }
+  .nav-links {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .nav-links a {
+    margin-right: 30px;
+    font-size: 18px;
+    text-decoration: none;
+    color: #333;
+  }
+  .header {
+    background-image: url('./Sankalpav1imgs/design\ 9.png'); /* Replace with actual image */
+    background-size: cover;
+    background-position: center;
+    height: 120vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .content {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .problem-statement {
+    background-image: url('./Sankalpav1imgs/design\ 11.png'); /* Replace with actual image */
+    background-size: cover;
+    background-position: center;
+    height: 120vh; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+  }
 
-      @media (min-width: 768px) {
-        .bd-placeholder-img-lg {
-          font-size: 3.5rem;
-        }
-      }
+  .content-section {
+    padding: 30px 0; /* Add padding to top and bottom of content sections */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
-      .b-example-divider {
-        width: 100%;
-        height: 3rem;
-        background-color: rgba(0, 0, 0, .1);
-        border: solid rgba(0, 0, 0, .15);
-        border-width: 1px 0;
-        box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-      }
+  .section-title {
+    font-size: 28px;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 
-      .b-example-vr {
-        flex-shrink: 0;
-        width: 1.5rem;
-        height: 100vh;
-      }
-
-      .bi {
-        vertical-align: -.125em;
-        fill: currentColor;
-      }
-
-      .nav-scroller {
-        position: relative;
-        z-index: 2;
-        border-radius: 20%;
-        height: 2.75rem;
-        overflow-y: hidden;
-      }
-
-      .nav-scroller .nav {
-        display: flex;
-        flex-wrap: nowrap;
-        padding-bottom: 1rem;
-        margin-top: -1px;
-        overflow-x: auto;
-        text-align: center;
-        white-space: nowrap;
-        -webkit-overflow-scrolling: touch;
-      }
-
-      .btn-bd-primary {
-        --bd-violet-bg: #712cf9;
-        --bd-violet-rgb: 112.520718, 44.062154, 249.437846;
-
-        --bs-btn-font-weight: 600;
-        --bs-btn-color: var(--bs-white);
-        --bs-btn-bg: var(--bd-violet-bg);
-        --bs-btn-border-color: var(--bd-violet-bg);
-        --bs-btn-hover-color: var(--bs-white);
-        --bs-btn-hover-bg: #6528e0;
-        --bs-btn-hover-border-color: #6528e0;
-        --bs-btn-focus-shadow-rgb: var(--bd-violet-rgb);
-        --bs-btn-active-color: var(--bs-btn-hover-color);
-        --bs-btn-active-bg: #5a23c8;
-        --bs-btn-active-border-color: #5a23c8;
-      }
-
-      .bd-mode-toggle {
-        z-index: 1500;
-      }
-
-      .bd-mode-toggle .dropdown-menu .active .bi {
-        display: block !important;
-      }
-    </style>
-
+  .section-text {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  .specs-container {
+    background-image: url('./Sankalpav1imgs/design3.png'); /* Replace with actual image */
+    background-size: cover;
+    background-position: center;
+    height: 120vh; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+  }
+  .specs-content {
+    max-width: 800px;
+    padding: 20px;
+    font-size: 18px;
+  }
+  .carousel-container {
+   max-height: fit-content;
+    max-width: fit-content;/* Adjust height as needed */
+    overflow: hidden;
+  }
+  .carousel-images {
+    display: flex;
     
-    <!-- Custom styles for this template -->
-    <link href="./RADKRING.css" rel="stylesheet">
-  </head>
-  <body>
-    <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-      <symbol id="check2" viewBox="0 0 16 16">
-        <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
-      </symbol>
-      <symbol id="circle-half" viewBox="0 0 16 16">
-        <path d="M8 15A7 7 0 1 0 8 1v14zm0 1A8 8 0 1 1 8 0a8 8 0 0 1 0 16z"/>
-      </symbol>
-      <symbol id="moon-stars-fill" viewBox="0 0 16 16">
-        <path d="M6 .278a.768.768 0 0 1 .08.858 7.208 7.208 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277.527 0 1.04-.055 1.533-.16a.787.787 0 0 1 .81.316.733.733 0 0 1-.031.893A8.349 8.349 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.752.752 0 0 1 6 .278z"/>
-        <path d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.734 1.734 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.734 1.734 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.734 1.734 0 0 0 1.097-1.097l.387-1.162zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L13.863.1z"/>
-      </symbol>
-      <symbol id="sun-fill" viewBox="0 0 16 16">
-        <path d="M8 12a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
-      </symbol>
-    </svg>
+  }
+  
+  .mission-container{
+    background-image: url('./Radkring.logos/3d-rendering-arrow-hitting-target.jpg'); /* Replace with actual image */
+    background-size: cover;
+    background-position: center;
+    height: 120vh; /* Adjust height as needed */
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    
+    text-align: middle;
+  }
+  
+  .vision-container{
+    background-image: url('./Radkring.logos/eeagle.vision.jpg'); /* Replace with actual image */
+    background-size: cover;
+    background-position: center;
+    height: 120vh; /* Adjust height as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+  }
 
-    <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
-      <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center"
-              id="bd-theme"
-              type="button"
-              aria-expanded="false"
-              data-bs-toggle="dropdown"
-              aria-label="Toggle theme (auto)">
-        <svg class="bi my-1 theme-icon-active" width="1em" height="1em"><use href="#circle-half"></use></svg>
-        <span class="visually-hidden" id="bd-theme-text">Toggle theme</span>
-      </button>
-      <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
-            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#sun-fill"></use></svg>
-            Light
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
+  .textbg{
+    background-color: transparent;
+    background-image: url(./Radkring.logos/wallpaperflare.com_wallpaper\ \(1\).jpg);
+  }
+  h2,p{
+    background-image: url(./Radkring.logos/wallpaperflare.com_wallpaper\ \(1\).jpg);
+    background-position: center; /* Positions image at the center */
+  background-size: cover; /* Scales image to cover the navbar area */
+  padding: 10px 20px; /* 
+    /* Ensures background covers the entire text content */
+    background-clip: text;
+    /* Removes default text color */
+    -webkit-text-fill-color: transparent;
+  }
+
+  .footer {
+    background-color: transparent;
+    
+    text-align: center;
+    padding: 20px;
+   
+    bottom: 0;
+    width: 100%;
+    font-size: 18px;
+  }
+</style>
+
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light">
+    <a href="#"><img src="./Radkring.logos/nameremoved.png" alt="RAD KRING" style="height: 50px;"; class="logo1"></a>
+  <a href="#"><img src="./Radkring.logos/Garuda.bg removed.png" alt="RAD KRING" class="logo"></a>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item gradient-text">
+          <a class="nav-link" href="#">Contact Us</a>
         </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark" aria-pressed="false">
-            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#moon-stars-fill"></use></svg>
-            Dark
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
+        <li class="nav-item gradient-text">
+          <a class="nav-link" href="#">Sankalpa V1</a>
         </li>
-        <li>
-          <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto" aria-pressed="true">
-            <svg class="bi me-2 opacity-50" width="1em" height="1em"><use href="#circle-half"></use></svg>
-            Auto
-            <svg class="bi ms-auto d-none" width="1em" height="1em"><use href="#check2"></use></svg>
-          </button>
+        <li class="nav-item gradient-text">
+          <a class="nav-link" href="#">About Us</a>
         </li>
       </ul>
     </div>
-
-    
-<svg xmlns="http://www.w3.org/2000/svg" class="d-none">
-  <symbol id="aperture" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24">
-    <circle cx="12" cy="12" r="10"/>
-    <path d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94"/>
-  </symbol>
-  <symbol id="cart" viewBox="0 0 16 16">
-    <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l.84 4.479 9.144-.459L13.89 4H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-  </symbol>
-  <symbol id="chevron-right" viewBox="0 0 16 16">
-    <path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"/>
-  </symbol>
-</svg>
-
-<nav class="navbar">
-  <a href="RADKRING.html"><img src="./Radkring.logos/nameremoved.png" alt="RAD KRING" style="height: 50px;"; class="logo1"></a>
-  <a href="RADKRING.html"><img src="./Radkring.logos/Garuda.bg removed.png" alt="RAD KRING" class="logo"></a>
-  <ul class="nav-links">
-    <li><b><a href="#" class="gradient-text " style="font-size: large; color: orangered;">About</a></b></li>
-    <li><b><a href="#" class="gradient-text " style="font-size: large; color: orangered;">Sankalpa V1</a></b></li>
-    <li><b><a href="#" class="gradient-text " style="font-size: large; color: orangered;">Contact Us</a></b></li>
-  </ul>
-</nav>>
-
-<main>
+  </nav>
   
-  <div>
-  <div  class="overflow-hidden p-3 p-md-5 m-md-3 text-center  " style="position: 75; top: 50%;">
-   
-    <div class="col-md-10 p-lg-5 mx-auto my-5">
-      
-      
+  
+
+  <div class="header d-flex justify-content-center align-items-center content-section">
+    <div class="text-center">
       <h2 class="fw-normal text-muted mb-3 gradient-text-3"><b>Embark on Your Skyward Journey With</b></h2>
       <a href="Sankalpav1.html" style="text-decoration: none;"><h1 class="display-3 fw-bold gradient-text">Sankalpa V1</h1></a>
-      <div class="d-flex gap-3 justify-content-center lead fw-normal">
-      </div>
     </div>
-    <div class="product-device shadow-sm d-none d-md-block"></div>
-    <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
   </div>
-</div>
+
+  <div class="problem-statement content-section">
+    <div class="text-center">
+      <h2 class="section-title">Our Problem Statement</h2>
+      <p class="section text">Description of the problem statement goes here.</p>
+    </div>
+  </div>
+
+  <section class="specifications">
+    <div class="container">
+      <h2>EVTOL Specifications</h2>
+      <ul>
+        <li><strong>Speed:</strong> 300 kilometers per hour</li>
+        <li><strong>Range:</strong> 500 kilometers</li>
+        <li><strong>Number of passengers:</strong> 4</li>
+        <li><strong>Noise level:</strong> 60-65 decibels</li>
+        <li><strong>Maximum Takeoff Weight (MTOW):</strong> 2100 kilograms</li>
+        <li><strong>Carbon emission:</strong> 0</li>
+        <li><strong>Fully electric</strong></li>
+      </ul>
+    </div>
+  </section>
 
   
-</main>
 
-<footer class="container py-5">
-  <div  class="row">
-    <div class="container">
-      <footer  class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+  
+
+  <div class="mission-container content-section ">
+    <div class="text-center">
+      <h2>Our Mission</h2>
+      <p>Description of the mission goes here.</p>
+    </div>
+  </div>
+
+  <div class="vision-container content-section">
+    <div class="text-center"> 
+      <h2>Our Vision</h2>
+      <p>Description of the vision goes here.</p>
+    </div>
+  </div>
+
+  <div class="footer " >
+    <div class="text-center">
+      <footer  class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top gradient-text-3">
         <b><p style="color: orangered;" class="col-md-4 mb-0 text-body-secondary gradient-text-2 " >&copy; 2024 Company, Inc</p></b>
     
         <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
@@ -232,8 +339,14 @@
       </footer>
     </div>
   </div>
-</footer>
-<script src="/docs/5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  
+  
 
-    </body>
+  <!-- Bootstrap JS -->
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</head>
 </html>
