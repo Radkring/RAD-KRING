@@ -1,0 +1,16 @@
+notes
+
+thunder client is like postman which gives acces for making a request to the https via api (application programming interface)
+
+npm is a package manager
+npx - udhar leke istemal karke wapis dedena | if you are running out of storage then this is the best option to use the services you need without installing them into your pc
+
+create new react app - "npx creat-react-app my-app_
+
+extensions used :
+1. react open ql/ redux -
+2. live server - when you click go live after then you can have a preview of it in the vs code itself 
+3. bracket colourizer - colourizes the different brackets for visualization of diferent blocks of codes which make it user friendly
+4. thunder client - performs postman like api calling https tasks but in the vscode's area itself 
+5. auto rename tags - automatically renames the new components tags 
+6.pritter code formatter - 

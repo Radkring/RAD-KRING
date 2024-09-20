@@ -1,0 +1,65 @@
+.map-container {
+  position: relative;
+}
+
+.travel-info {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%; /* Adjust the width to scale the card */
+  max-width: 800px; /* Set a maximum width for the card */
+  background: linear-gradient(
+    rgba(218, 217, 217, 0.589), /* Light white with some transparency */
+    rgba(109, 107, 107, 0.239) /* Lighter white with more transparency */
+  ); /* White gradient background */
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center; /* Center text inside the card */
+  box-shadow: none; /* No border or shadow */
+  z-index: 1000; /* Ensure it's above the map */
+}
+
+.travel-card {
+  font-size: 36px; /* Larger text size */
+  font-weight: bold;
+}
+
+.travel-text {
+  display: block;
+  color: black; 
+  font-size: 40px; /* Slightly smaller for the text part */
+  text-transform: uppercase; /* Make text all caps */
+  margin-bottom: 10px; /* Space between text and count */
+}
+
+.count {
+  font-size: 58px; /* Larger number size */
+  font-weight: bold;
+  background-image: radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% ); /* Gradient background for numbers */
+  -webkit-background-clip: text; /* Clip gradient to text */
+  -webkit-text-fill-color: transparent; /* Make text color transparent so gradient shows */
+  text-transform: uppercase; /* Ensure consistency with all caps */
+}
+
+/* Map Section Styles */
+.map-section {
+  position: relative; /* Position relative to maintain stacking context */
+  top: 0; /* Align to the top */
+  height: calc(100vh - 80px); /* Full height minus navbar height */
+  background-color: #e0e0e0; /* Example background color */
+  z-index: 1; /* Ensure it stays below the navbar */
+}
+
+/* Optional: Animation Styles */
+.map-animation {
+  /* Add your animation styles here */
+}
+
+
+  @keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+  }
+  

@@ -1,0 +1,27 @@
+javascript refresher
+
+main language to perform code, got out of the browser and now its the most popular language 
+
+3 ways to make a variable in javascript
+1. var -
+2. let - modern js type (always use let)
+3. const'
+
+datatypes -
+1.String
+2.Number
+//3.Bigint
+4.Boolean
+5.Undefined
+6.Null
+//7.Symbol
+8.Object
+
+
+functions: 
+
+syntax= "function name() {
+
+}"
+
+yeh sab ka refrence hai cheatsheet mein joh channel par hai "codewithharry"

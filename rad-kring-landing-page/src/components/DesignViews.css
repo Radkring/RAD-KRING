@@ -1,0 +1,43 @@
+.design-views-container {
+  position: relative;
+  height: 100vh; /* Full viewport height */
+  width: 100%; /* Full width */
+  overflow: hidden; /* Hide overflow */
+}
+
+.design-views-scroll {
+  display: flex; /* Align children in a row */
+  height: 100%; /* Full height */
+  width: 100%; /* Full width */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scroll-behavior: smooth; /* Smooth scrolling */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+}
+
+.design-views-scroll::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.design-card {
+  flex: 0 0 100%; /* Each card takes full viewport width */
+  height: 100%; /* Full height for cards */
+  display: flex; /* Flexbox for centering */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  transition: transform 0.5s ease; /* Smooth transition */
+  background: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+  backdrop-filter: blur(15px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(15px); /* Safari support */
+  border-radius: 16px; /* Rounded corners */
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Shadow effect */
+  margin: 10px; /* Margin around cards */
+  padding: 20px; /* Padding inside cards */
+}
+
+.design-image {
+  width: calc(100% - 40px); /* Adjust width to account for padding */
+  height: calc(100% - 40px); /* Adjust height to account for padding */
+  object-fit: cover; /* Cover the entire card area */
+  border-radius: 16px; /* Rounded corners for the image */
+}

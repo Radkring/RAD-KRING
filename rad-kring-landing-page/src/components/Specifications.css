@@ -1,0 +1,126 @@
+/* Import Orbitron font */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&display=swap');
+
+/* Specifications Section */
+.specifications {
+  padding: 2rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+}
+
+/* Title Styling with Gradient */
+.spec-title {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  background-image: linear-gradient( 109.6deg, rgba(9,9,121,1) 11.2%, rgba(144,6,161,1) 53.7%, rgba(0,212,255,1) 100.2% );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Gradient text effect */
+}
+
+/* Items Container */
+.spec-items {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+/* Individual Specification Cards */
+.spec-item {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease, background 0.3s ease; /* Add transition for hover effect */
+  color: rgb(0, 0, 0);
+}
+
+/* Card Titles with Gradient */
+.spec-item h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.75rem;
+  background-image: linear-gradient( 109.6deg, rgba(15,2,2,1) 11.2%, rgba(36,163,190,1) 91.1% );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Gradient text effect */
+  font-family: 'Orbitron', sans-serif; /* Ensure font is applied */
+}
+
+/* Numbers with Gradient Effect */
+.count-number {
+  font-size: 2.5rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #eb7659, #feb47b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: gradient 3s ease-in-out infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Hover Effect for Cards */
+.spec-item:hover {
+  background: rgba(255, 255, 255, 0.2); /* Change background on hover */
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+  .spec-title {
+    font-size: 2rem;
+  }
+
+  .count-number {
+    font-size: 2rem;
+  }
+
+  .spec-item {
+    width: 200px;
+  }
+}
+/* Specifications Section */
+.specifications {
+  padding: 2rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  text-align: center;
+  font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: rgb(0, 0, 0);
+}
+
+/* Title Styling with Gradient and All Caps */
+.spec-title {
+  margin-bottom: 2rem;
+  font-size: 3rem;
+  text-transform: uppercase; /* Make text uppercase */
+  background-image: linear-gradient( 109.6deg, rgba(9,9,121,1) 11.2%, rgba(144,6,161,1) 53.7%, rgba(0,212,255,1) 100.2% );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Gradient text effect */
+  font-family: 'Orbitron', sans-serif; /* Ensure font is applied */
+}

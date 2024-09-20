@@ -1,0 +1,104 @@
+.services {
+  padding: 20px;
+  background-image: url('../assets/pexels-eva-bronzini-8058552.jpg'); /* Your background image */
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh; /* Full height */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.services-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-family: 'Orbitron', sans-serif; /* Orbitron font */
+  font-size: 3rem; /* Increased font size */
+  background-image: linear-gradient( 109.6deg,  rgba(9,9,121,1) 11.2%, rgba(144,6,161,1) 53.7%, rgba(0,212,255,1) 100.2% );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Gradient text effect */
+  font-weight: bold; /* Bold text */
+}
+
+.services-scroll {
+  display: flex;
+  gap: 20px; /* Space between cards */
+  padding: 10px;
+  width: 100%; /* Full width */
+  overflow-x: auto; /* Enable horizontal scrolling */
+  scrollbar-width: none; /* Hide scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hide scrollbar for Internet Explorer and Edge */
+  background: transparent; /* Invisible background for the scrolling deck */
+}
+
+.services-scroll::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.service-card {
+  background: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: center;
+  flex: 0 0 30%; /* Adjust width to fit 3 cards */
+  max-width: 30%; /* Set max width for the card */
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.service-card-image {
+  width: 100%;
+  height: 450px; /* Increased height for taller images */
+  border-radius: 10px;
+  object-fit: cover; /* Maintain aspect ratio */
+}
+
+.service-card-title {
+  font-family: 'Orbitron', sans-serif; /* Orbitron font for title */
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+  background-image: linear-gradient( 109.6deg,  rgba(9,9,121,1) 11.2%, rgba(144,6,161,1) 53.7%, rgba(0,212,255,1) 100.2% );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Gradient text effect */
+  font-weight: bold; /* Bold text */
+  overflow: hidden; /* Hide overflow for animation */
+  white-space: nowrap; /* Prevent line breaks */
+  border-right: 2px solid black; /* Cursor effect */
+  width: auto; /* Set width to auto */
+  transition: width 0.5s; /* Smooth transition */
+}
+
+.service-card:hover .service-card-title {
+  width: 100%; /* Expand to full width on hover */
+  animation: typewriter 0.5s forwards; /* Apply typewriter effect */
+}
+
+.service-card-description {
+  font-family: 'Orbitron', sans-serif; /* Orbitron font for description */
+  color: black; /* Set description text color to black */
+  font-weight: bold; /* Bold text */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .service-card {
+    width: 80%; /* Make cards responsive on smaller screens */
+    max-width: 80%; /* Adjust max width */
+  }
+}
+
+/* Keyframes for typewriter animation */
+@keyframes typewriter {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}

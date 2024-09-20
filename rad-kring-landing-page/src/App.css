@@ -1,0 +1,147 @@
+/* Global Styles */
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif; /* Set a default font */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Main container and sections */
+.main-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden; /* Hide overflow by default */
+}
+
+.container {
+  width: 100%; /* Ensure container fits the page width */
+  height: 100%; /* Ensure container fits the page height */
+  overflow: hidden; /* Hide overflow by default */
+  position: relative; /* Position for the scrollbar overlay */
+}
+
+/* Card styling */
+.card {
+  max-width: 100%; /* Ensure card does not exceed viewport width */
+  margin: auto; /* Center align the card */
+  padding: 1rem; /* Add padding as needed */
+}
+
+/* Scrollbar Styles */
+
+/* WebKit browsers (Chrome, Safari) */
+.container::-webkit-scrollbar {
+  width: 8px; /* Width of the vertical scrollbar */
+  height: 8px; /* Height of the horizontal scrollbar */
+}
+
+.container::-webkit-scrollbar-track {
+  background: transparent; /* Transparent background for the scrollbar track */
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2); /* Semi-transparent color for the scrollbar thumb */
+  border-radius: 10px; /* Rounded corners for the thumb */
+  transition: background 0.3s ease; /* Smooth transition for color change */
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 0, 0, 0.5); /* Darker color when hovering */
+}
+
+/* Firefox */
+* {
+  scrollbar-width: thin; /* Thin scrollbar */
+  scrollbar-color: rgba(0, 0, 0, 0.2) transparent; /* Thumb and track colors */
+}
+
+/* Show scrollbar only while scrolling */
+.container {
+  overflow: auto; /* Enable scrollbars */
+}
+
+/* App Header Styles */
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .main-section {
+    /* Adjust styles for smaller screens */
+  }
+}
+
+@media (min-width: 769px) {
+  .main-section {
+    /* Adjust styles for larger screens */
+  }
+}
+
+/* In your component-specific CSS */
+.container {
+  overflow: auto; /* Ensure scrollbars appear */
+  /* Additional scrollbar styling */
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif; /* Ensure headings also use Montserrat */
+}
+
+.navbar-links a {
+  font-family: 'Montserrat', sans-serif; /* Navbar links */
+}
+
+.service-title {
+  font-family: 'Montserrat', sans-serif; /* Service card titles */
+}
+
+.service-description {
+  font-family: 'Montserrat', sans-serif; /* Service card descriptions */
+}
+
+/* Add more specific styles as needed for other text elements */

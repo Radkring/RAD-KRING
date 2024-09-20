@@ -1,0 +1,31 @@
+.service-card {
+  background: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+  backdrop-filter: blur(10px); /* Frosted glass effect */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  text-align: center;
+  width: 300px; /* Adjust size for your layout */
+  transition: transform 0.3s;
+}
+
+.service-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+}
+
+.service-card-image {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.service-card-title {
+  font-family: 'Orbitron', sans-serif; /* Orbitron font for title */
+  font-size: 1.5rem;
+  margin: 1rem 0 0.5rem;
+}
+
+.service-card-description {
+  font-family: 'Orbitron', sans-serif; /* Orbitron font for description */
+  color: #333; /* Adjust color for visibility */
+}
