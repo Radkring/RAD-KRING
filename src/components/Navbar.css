@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
 
 /* Base styles for the navbar */
 .navbar {
@@ -9,10 +9,12 @@
   background-color: rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(12px) saturate(180%);
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  padding: 0 1rem; /* Adjusted padding for better spacing */
+  padding: 0 2rem;
   z-index: 10;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+  transition: background-color 0.3s ease-in-out;
 }
 
 /* Company Logo (left) */
@@ -22,10 +24,16 @@
   align-items: center;
 }
 
-.navbar-logo .logo-image {
-  height: 70px; /* Height for the logo */
-  width: auto;
-  max-width: 100%; /* Ensure responsive scaling */
+.navbar-logo .brand-name {
+  font-size: 2rem; /* Default font size for larger screens */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Make it bolder */
+  letter-spacing: 0.5em; /* Increased letter spacing */
+  font-family: 'Michroma', sans-serif; /* Use Michroma font for brand name */
+  background: black;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  white-space: nowrap; /* Prevent wrapping of "RAD KRING" */
 }
 
 /* Center Logo */
@@ -37,7 +45,7 @@
 }
 
 .navbar-center .eagle-logo {
-  height: 70px; /* Height for the eagle logo */
+  height: 70px; /* Default height for larger screens */
   width: auto;
 }
 
@@ -56,17 +64,18 @@
   display: inline;
 }
 
-.navbar-links a {
+.navbar-links .nav-link {
   text-decoration: none;
   color: black; /* Default text color */
-  font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
-  font-weight: bold;
+  font-family: 'Michroma', sans-serif; /* Use Michroma font for links */
+  font-weight: bold; /* Make links bold */
   font-size: 1.2rem; /* Increased font size */
-  transition: background 0.3s ease; /* Smooth background transition */
+  position: relative;
+  transition: color 0.3s ease; /* Smooth transitions */
 }
 
-.navbar-links a:hover {
-  background-image: linear-gradient( 109.6deg,  rgba(9,9,121,1) 11.2%, rgba(144,6,161,1) 53.7%, rgba(0,212,255,1) 100.2% );
+.navbar-links .nav-link:hover {
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -83,7 +92,7 @@
   height: 3px;
   background-color: rgba(229, 81, 13, 0.868);
   margin: 3px 0;
-  transition: 0.3s;
+  transition: transform 0.3s ease;
 }
 
 /* Mobile menu (initially hidden) */
@@ -109,21 +118,51 @@
 }
 
 .mobile-menu ul li a {
-  color: rgba(229, 81, 13, 0.868);
+  color: black; /* Default text color for mobile links */
+  font-family: 'Michroma', sans-serif; /* Use Michroma font for mobile links */
   font-weight: bold;
   font-size: 1.2rem;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.mobile-menu ul li a:hover {
+  background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 /* Responsive adjustments */
+@media (max-width: 1024px) {
+  .navbar {
+    padding: 0 1rem; /* Adjust padding for medium screens */
+  }
+
+  .navbar-logo .brand-name {
+    font-size: 1.8rem; /* Adjust font size for medium screens */
+  }
+
+  .navbar-center .eagle-logo {
+    height: 60px; /* Adjust logo height for medium screens */
+  }
+
+  .navbar-links .nav-link {
+    font-size: 1.1rem; /* Adjust font size for medium screens */
+  }
+}
+
 @media (max-width: 768px) {
   .navbar {
     padding: 0.5rem; /* Adjust padding for smaller screens */
+    justify-content: space-between;
   }
 
-  .navbar-logo .logo-image,
+  .navbar-logo .brand-name {
+    font-size: 1.5rem; /* Adjust font size for mobile */
+  }
+
   .navbar-center .eagle-logo {
-    height: 50px; /* Smaller logo height for mobile */
+    height: 50px; /* Adjust logo height for mobile screens */
   }
 
   .navbar-links {
@@ -136,5 +175,41 @@
 
   .mobile-menu {
     display: block; /* Show mobile menu when active */
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.5rem; /* Adjust padding for extra small screens */
+  }
+
+  .navbar-logo .brand-name {
+    font-size: 1.3rem; /* Adjust font size for smaller phones */
+  }
+
+  .navbar-center .eagle-logo {
+    height: 40px; /* Adjust logo height for extra small screens */
+  }
+
+  .navbar-links .nav-link {
+    font-size: 1rem; /* Adjust font size for extra small screens */
+  }
+}
+
+@media (max-width: 320px) {
+  .navbar {
+    padding: 0.5rem; /* Keep padding consistent for very small screens */
+  }
+
+  .navbar-logo .brand-name {
+    font-size: 1.2rem; /* Further adjust font size for very small phones */
+  }
+
+  .navbar-center .eagle-logo {
+    height: 35px; /* Further adjust logo height for very small phones */
+  }
+
+  .navbar-links .nav-link {
+    font-size: 0.9rem; /* Further adjust font size for very small phones */
   }
 }

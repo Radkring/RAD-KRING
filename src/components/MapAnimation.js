@@ -10,13 +10,18 @@ const puneCoords = [18.5204, 73.8567];
 const pathCoords = [mumbaiCoords, puneCoords];
 
 const MapAnimation = () => {
-  const [animate, setAnimate] = useState(false);
+  const [countKey, setCountKey] = useState(0); // State to reset count
 
   useEffect(() => {
-    // Trigger the animation after the component mounts
-    const timer = setTimeout(() => setAnimate(true), 100);
+    // Reset counting animation on mount
+    const timer = setTimeout(() => setCountKey(countKey + 1), 100);
     return () => clearTimeout(timer);
   }, []);
+
+  // Function to reset counter on hover
+  const handleHover = () => {
+    setCountKey(countKey + 1); // Update state to reset CountUp
+  };
 
   return (
     <div className="map-container">
@@ -41,16 +46,13 @@ const MapAnimation = () => {
           weight={5}
           opacity={0.8}
         />
-        {animate && (
-          <div className="animated-point" />
-        )}
       </MapContainer>
-      <div className="travel-info">
-        <div className="travel-card">
-          <span className="travel-text">MUMBAI TO PUNE IN JUST </span>
-          <span className="count">
-            <CountUp start={0} end={48} duration={3} suffix=" MINS" />
-          </span>
+      
+      {/* New Static Card */}
+      <div className="new-card">
+        <h2>MUMBAI TO PUNE IN JUST</h2>
+        <div className="count count-animation" onMouseEnter={handleHover}>
+          <CountUp key={countKey} start={0} end={48} duration={3} suffix=" MINS" />
         </div>
       </div>
     </div>

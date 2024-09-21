@@ -20,7 +20,7 @@ const Specifications = () => {
     <section
       id="specifications"
       className="specifications"
-      style={{ backgroundImage: `url(${backgroundImg})` }}
+      
     >
       <h2 className="spec-title">Specifications</h2>
       <div className="spec-items">

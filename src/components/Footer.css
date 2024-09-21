@@ -1,0 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Michroma&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 1.5rem; /* Adjusted padding */
+    background: rgba(255, 255, 255, 0.2); /* Semi-transparent white for frosted effect */
+    backdrop-filter: blur(10px); /* Frosted glass blur effect */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Soft shadow for a subtle 3D effect */
+    font-family: 'Michroma', sans-serif;
+    color: black; /* Ensure text is visible on the frosted background */
+    border: 1px solid rgba(255, 255, 255, 0.3); /* Optional: A subtle border for definition */
+  }
+  
+
+.social-media-card {
+  background-image: linear-gradient( 109.6deg,  rgba(112,246,255,0.33) 11.2%, rgba(221,108,241,0.26) 42%, rgba(229,106,253,0.71) 71.5%, rgba(123,183,253,1) 100.2% );
+  border-radius: 10px;
+  padding: 1rem;
+  width: 25%; /* Adjusted width */
+  height: auto; /* Adjust height automatically */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start; /* Align items to the start */
+}
+
+.social-media-card h3 {
+  font-family: 'Michroma', sans-serif; /* Use Michroma for heading */
+  margin: 1rem 0; /* Adjusted margin */
+  font-size: 1.5rem; /* Increased font size */
+}
+
+.qr-code {
+  margin: 0.5rem 0; 
+  text-align: center;
+  width: 100%; 
+}
+
+.qr-code img {
+  width: 80%; /* Make it a bit larger */
+  height: auto; /* Maintains aspect ratio */
+  max-width: 150px; /* Adjust max width for better scanning */
+  border-radius: 5px; /* Optional for aesthetics */
+}
+
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem; /* Adjusted space between QR and icons */
+}
+
+.social-icons a {
+  color: black; /* Black icons for visibility */
+  font-size: 1.5rem; /* Adjust icon size */
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff6c00; /* Change color on hover */
+}
+
+.footer-content {
+  width: 60%; /* Reverted width for consistency */
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-column {
+  width: 30%; /* Each column takes 30% width */
+}
+
+.footer-column h4 {
+  font-family: 'Michroma', sans-serif; /* Use Michroma for column headings */
+  font-size: 1.5rem; /* Increased font size */
+}
+
+.footer-content a {
+  color: black; /* Black text for email link */
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif; /* Use Orbitron font */
+  transition: background 0.3s, color 0.3s;
+}
+
+.footer-content a:hover {
+  background: linear-gradient(to right, #ff6c00, #ff9a00); /* Gradient effect on hover */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; /* Makes text transparent to show gradient */
+}
+
+.footer-container {
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.footer-column h4 {
+  font-family: 'Michroma', sans-serif;
+  font-size: 1.5rem;
+  background-image: linear-gradient(45deg, rgba(255, 0, 150, 1), rgba(255, 140, 0, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.footer-content a {
+  color: black; /* Fallback color */
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  transition: background-image 0.3s ease, color 0.3s ease;
+  display: inline-block;
+}
+
+.footer-content a:hover {
+  background-image: linear-gradient(45deg, rgba(255, 0, 150, 1), rgba(255, 140, 0, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+
+.address-section {
+  margin-top: 1rem; /* Space above address section */
+  font-family: 'Orbitron', sans-serif; /* Use Orbitron for address section */
+}
+
+.address-section p {
+  margin: 0.5rem 0; /* Space between address, email, and phone */
+}
+
+/* Copyright section styling */
+.copyright-card {
+  width: 100%; /* Full width below columns */
+  padding: 1rem;
+  font-weight: bold;
+  letter-spacing: 0.1rem;
+  background-image: linear-gradient( 109.6deg,  rgba(112,246,255,0.33) 11.2%, rgba(221,108,241,0.26) 42%, rgba(229,106,253,0.71) 71.5%, rgba(123,183,253,1) 100.2% );
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0);
+  text-align: center; /* Center the copyright text */
+  margin-top: 1rem; /* Space above copyright section */
+}
+
+.copyright {
+  font-family: 'Orbitron', sans-serif; /* Use Orbitron for copyright text */
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .social-media-card, .footer-content, .copyright-card {
+    width: 90%; /* Full width on smaller screens */
+    margin-bottom: 1rem; /* Space between sections */
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    align-items: center; /* Center align columns on mobile */
+  }
+
+  .footer-column {
+    width: 100%; /* Full width for each column on mobile */
+    margin-bottom: 1rem; /* Space between columns */
+  }
+}

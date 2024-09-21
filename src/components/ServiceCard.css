@@ -1,5 +1,5 @@
 .service-card {
-  background: rgba(255, 255, 255, 0.2); /* Slightly transparent background */
+  background-image: white;
   backdrop-filter: blur(10px); /* Frosted glass effect */
   -webkit-backdrop-filter: blur(10px); /* Safari support */
   border-radius: 16px;

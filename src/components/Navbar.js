@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import './Navbar.css';
-import companyLogo from '../assets/nameremoved.png';  // Replace with your logo path
 import eagleLogo from '../assets/Garuda.bg removed.png';  // Replace with your eagle logo path
 
 const Navbar = () => {
@@ -12,9 +11,9 @@ const Navbar = () => {
 
   return (
     <nav className="navbar">
-      {/* Left: Company Logo */}
+      {/* Left: Brand Name */}
       <div className="navbar-logo">
-        <img src={companyLogo} alt="Company Logo" className="logo-image" />
+        <a href="/" className="brand-name">RAD KRING</a>
       </div>
 
       {/* Center: Eagle Logo */}
@@ -25,13 +24,13 @@ const Navbar = () => {
       {/* Right: Navigation Links */}
       <ul className={`navbar-links ${isMobileMenuOpen ? 'active' : ''}`}>
         <li>
-          <a href="#services">Services</a>
+          <a href="#services" className="nav-link">Services</a>
         </li>
         <li>
-          <a href="#about">About</a>
+          <a href="#about" className="nav-link">About</a>
         </li>
         <li>
-          <a href="#contact">Contact</a>
+          <a href="#contact" className="nav-link">Contact</a>
         </li>
       </ul>
 
@@ -47,13 +46,13 @@ const Navbar = () => {
         <div className="mobile-menu active">
           <ul>
             <li>
-              <a href="#services">Services</a>
+              <a href="#services" className="nav-link">Services</a>
             </li>
             <li>
-              <a href="#about">About</a>
+              <a href="#about" className="nav-link">About</a>
             </li>
             <li>
-              <a href="#contact">Contact</a>
+              <a href="#contact" className="nav-link">Contact</a>
             </li>
           </ul>
         </div>

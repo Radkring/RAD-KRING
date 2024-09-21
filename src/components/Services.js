@@ -3,7 +3,7 @@ import './Services.css'; // Ensure you have this CSS file or adjust as needed
 import ServiceCard from './ServiceCard'; // Import the ServiceCard component
 
 // Importing images
-import passengerTravelImg from '../assets/pax.jpg';
+import passengerTravelImg from '../assets/passenger.jpg';
 import medicalEvacuationsImg from '../assets/medical.jpg';
 import rescueOperationsImg from '../assets/rescue.jpg';
 import logisticsTransportationImg from '../assets/logistics.jpg';
@@ -17,7 +17,7 @@ const services = [
     image: passengerTravelImg
   },
   {
-    title: "Medical Evacuations",
+    title: "Air Ambulance",
     description: "Emergency air transport for patients, providing rapid response to medical emergencies.",
     image: medicalEvacuationsImg
   },

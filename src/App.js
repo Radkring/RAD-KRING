@@ -5,6 +5,7 @@ import Specifications from './components/Specifications';
 import MapAnimation from './components/MapAnimation';
 import DesignViews from './components/DesignViews';
 import Services from './components/Services';
+import Footer from './components/Footer'; // Ensure this matches the file name
 import './App.css';
 
 function App() {
@@ -16,6 +17,7 @@ function App() {
       <MapAnimation />
       <DesignViews />
       <Services />
+      <Footer /> {/* Include the Footer component */}
     </>
   );
 }

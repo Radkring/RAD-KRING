@@ -1,6 +1,6 @@
 import React from 'react';
 import './MainSection.css';
-import videoSrc from '../assets/3 audio.mp4'; // Adjust path as needed
+import videoSrc from '../assets/1st audio.mp4'; // Adjust path as needed
 
 const MainSection = () => {
   return (
@@ -10,7 +10,7 @@ const MainSection = () => {
         src={videoSrc}
         autoPlay
         loop
-        muted={true} // Change to true if you want to mute the audio
+        muted={false} // Change to true if you want to mute the audio
         playsInline
         preload="auto"
         onError={(e) => console.error("Video failed to load:", e.target.error)}

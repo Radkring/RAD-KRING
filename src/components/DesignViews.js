@@ -23,7 +23,7 @@ const DesignViews = () => {
 
         scrollContainer.scrollTo({
           left: newScrollLeft,
-          behavior: 'smooth'
+          behavior: 'smooth',
         });
       }
     }, 3000); // Scroll every 3 seconds

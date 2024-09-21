@@ -2,64 +2,81 @@
   position: relative;
 }
 
-.travel-info {
+.new-card {
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: 80%; /* Adjust the width to scale the card */
-  max-width: 800px; /* Set a maximum width for the card */
-  background: linear-gradient(
-    rgba(218, 217, 217, 0.589), /* Light white with some transparency */
-    rgba(109, 107, 107, 0.239) /* Lighter white with more transparency */
-  ); /* White gradient background */
+  width: 80%;
+  max-width: 800px;
+  background-image: linear-gradient(174.2deg, rgba(255, 244, 228, 0.7) 7.1%, rgba(240, 246, 238, 0.7) 67.4%); /* Reduced opacity */
+  backdrop-filter: blur(5px); /* Frosted glass effect */
   padding: 20px;
   border-radius: 10px;
-  text-align: center; /* Center text inside the card */
-  box-shadow: none; /* No border or shadow */
-  z-index: 1000; /* Ensure it's above the map */
+  text-align: center;
+  z-index: 1000;
+  border: 1px solid rgba(255, 255, 255, 0); /* Optional: Add a subtle border for definition */
 }
 
-.travel-card {
-  font-size: 36px; /* Larger text size */
+
+.new-card h2 {
+  font-size: 40px;
+  font-family: 'Orbitron', sans-serif;
+  background-image: linear-gradient(45deg, rgba(255, 0, 150, 1), rgba(255, 140, 0, 1)); /* Color change on hover */
+  -webkit-background-clip: text; /* Clips the background to the text */
+  -webkit-text-fill-color: transparent; /* Makes the text fill transparent */
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+
+.new-card .count {
+  font-size: 58px;
   font-weight: bold;
+  font-family: 'Orbitron', sans-serif;
+  background-image: linear-gradient(45deg, rgba(255, 0, 150, 1), rgba(255, 140, 0, 1));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-image 0.4s ease-out, transform 0.4s ease-out;
+  animation: pulse 2s infinite; /* Initial pulse animation */
 }
 
-.travel-text {
-  display: block;
-  color: black; 
-  font-size: 40px; /* Slightly smaller for the text part */
-  text-transform: uppercase; /* Make text all caps */
-  margin-bottom: 10px; /* Space between text and count */
+.new-card:hover .count {
+  background-image: linear-gradient(109.6deg, rgba(96,221,142,1) 11.2%, rgba(24,138,141,1) 91.1%);
+  transform: scale(1.1);
 }
 
-.count {
-  font-size: 58px; /* Larger number size */
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+
+.new-card .count {
+  font-size: 58px;
   font-weight: bold;
-  background-image: radial-gradient( circle farthest-corner at 17.1% 22.8%,  rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% ); /* Gradient background for numbers */
-  -webkit-background-clip: text; /* Clip gradient to text */
-  -webkit-text-fill-color: transparent; /* Make text color transparent so gradient shows */
-  text-transform: uppercase; /* Ensure consistency with all caps */
+  font-family: 'Orbitron', sans-serif;
+  background-image: linear-gradient(45deg, rgba(255, 0, 150, 1), rgba(255, 140, 0, 1)); /* Color change on hover */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background-image 0.4s ease-out, transform 0.4s ease-out; /* Transition for smooth animation */
 }
 
-/* Map Section Styles */
-.map-section {
-  position: relative; /* Position relative to maintain stacking context */
-  top: 0; /* Align to the top */
-  height: calc(100vh - 80px); /* Full height minus navbar height */
-  background-color: #e0e0e0; /* Example background color */
-  z-index: 1; /* Ensure it stays below the navbar */
+.new-card:hover .count {
+  background-image: linear-gradient( 109.6deg,  rgba(96,221,142,1) 11.2%, rgba(24,138,141,1) 91.1% );
+  transform: scale(1.1); /* Slightly larger on hover */
 }
 
-/* Optional: Animation Styles */
-.map-animation {
-  /* Add your animation styles here */
+.new-card .count:hover {
+  animation: none; /* Reset animation when hovered to recount */
 }
 
+.new-card .count-animation {
+  animation: pulse 2s infinite; /* Count element pulse animation */
+}
 
-  @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.05); }
-    100% { transform: scale(1); }
-  }
-  
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
