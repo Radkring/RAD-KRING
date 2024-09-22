@@ -42,7 +42,7 @@ const Footer = () => {
           ))}
         </div>
       </div>
-
+      <div>
       <div className="footer-content">
         <div className="footer-column">
           <h4>About</h4>
@@ -66,6 +66,7 @@ const Footer = () => {
         <div className="copyright">
           <p>Copyright © {new Date().getFullYear()} RAD KRING. All rights reserved.</p>
         </div>
+      </div>
       </div>
     </footer>
   );

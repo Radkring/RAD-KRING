@@ -168,3 +168,6 @@
     margin-bottom: 1rem; /* Space between columns */
   }
 }
+.pasting {
+  background:rgba(255, 0, 150, 1);
+}
