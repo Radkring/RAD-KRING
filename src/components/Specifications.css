@@ -17,13 +17,15 @@
   color: rgb(0, 0, 0);
 }
 
-/* Title Styling with Gradient */
+/* Title Styling with Gradient and All Caps */
 .spec-title {
   margin-bottom: 2rem;
   font-size: 3rem;
-  background-image: linear-gradient( 109.6deg, rgba(9,9,121,1) 11.2%, rgba(144,6,161,1) 53.7%, rgba(0,212,255,1) 100.2% );
+  text-transform: uppercase; /* Make text uppercase */
+  background-image: linear-gradient(109.6deg, rgba(9,9,121,1) 11.2%, rgba(144,6,161,1) 53.7%, rgba(0,212,255,1) 100.2%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; /* Gradient text effect */
+  font-family: 'Orbitron', sans-serif; /* Ensure font is applied */
 }
 
 /* Items Container */
@@ -52,7 +54,7 @@
 .spec-item h3 {
   font-size: 1.5rem;
   margin-bottom: 0.75rem;
-  background-image: linear-gradient( 109.6deg, rgba(15,2,2,1) 11.2%, rgba(36,163,190,1) 91.1% );
+  background-image: linear-gradient(109.6deg, rgba(15,2,2,1) 11.2%, rgba(36,163,190,1) 91.1%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; /* Gradient text effect */
   font-family: 'Orbitron', sans-serif; /* Ensure font is applied */
@@ -82,12 +84,13 @@
 .spec-item:hover {
   background: rgba(255, 255, 255, 0.2); /* Change background on hover */
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+  transform: scale(1.05); /* Add scale effect on hover */
 }
 
-/* Responsive Design for Smaller Screens */
+/* Responsive Design for Medium Screens */
 @media (max-width: 768px) {
   .spec-title {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
 
   .count-number {
@@ -95,32 +98,49 @@
   }
 
   .spec-item {
-    width: 200px;
+    width: 220px;
   }
 }
-/* Specifications Section */
-.specifications {
-  padding: 2rem;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  min-height: 100vh;
-  text-align: center;
-  font-family: 'Orbitron', sans-serif; /* Apply Orbitron font */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  color: rgb(0, 0, 0);
+
+/* Responsive Design for Small Screens (Mobile) */
+@media (max-width: 480px) {
+  .spec-title {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .count-number {
+    font-size: 1.8rem;
+  }
+
+  .spec-item {
+    width: 180px;
+    padding: 1.5rem;
+  }
+
+  .spec-item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
 }
 
-/* Title Styling with Gradient and All Caps */
-.spec-title {
-  margin-bottom: 2rem;
-  font-size: 3rem;
-  text-transform: uppercase; /* Make text uppercase */
-  background-image: linear-gradient( 109.6deg, rgba(9,9,121,1) 11.2%, rgba(144,6,161,1) 53.7%, rgba(0,212,255,1) 100.2% );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; /* Gradient text effect */
-  font-family: 'Orbitron', sans-serif; /* Ensure font is applied */
+/* Responsive Design for Extra Small Screens (320px and below) */
+@media (max-width: 320px) {
+  .spec-title {
+    font-size: 1.8rem;
+  }
+
+  .count-number {
+    font-size: 1.5rem;
+  }
+
+  .spec-item {
+    width: 160px;
+    padding: 1rem;
+  }
+
+  .spec-item h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
 }

@@ -10,7 +10,7 @@ const MainSection = () => {
         src={videoSrc}
         autoPlay
         loop
-        muted={false} // Change to true if you want to mute the audio
+        muted={false} // Change to true if you want the video to be muted
         playsInline
         preload="auto"
         onError={(e) => console.error("Video failed to load:", e.target.error)}
@@ -18,9 +18,9 @@ const MainSection = () => {
         <source src={videoSrc} type="video/mp4" />
         Your browser does not support the video tag.
       </video>
+      {/* You can add other content here if needed */}
     </div>
   );
 };
 
 export default MainSection;
-

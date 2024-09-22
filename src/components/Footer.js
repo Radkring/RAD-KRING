@@ -61,7 +61,6 @@ const Footer = () => {
           <p>Kandivali East, Mumbai, India</p>
         </div>
       </div>
-
       <div className="copyright-card">
         <div className="copyright">
           <p>Copyright © {new Date().getFullYear()} RAD KRING. All rights reserved.</p>

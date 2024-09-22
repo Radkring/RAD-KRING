@@ -1,20 +1,44 @@
+/* MainSection.css */
+
+/* Main container for the section */
 .main-section {
   position: relative;
   width: 100vw; /* Full viewport width */
   height: 100vh; /* Full viewport height */
-  overflow: hidden; /* Hide overflow to prevent scrolling */
+  overflow: hidden; /* Prevent scrolling caused by overflow */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Background video styling */
 .background-video {
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw; /* Full viewport width */
   height: 100vh; /* Full viewport height */
-  object-fit: cover; /* Cover the whole section */
-  z-index: -1; /* Place video behind content */
+  object-fit: cover; /* Ensure the video covers the entire section */
+  z-index: -1; /* Ensure the video stays behind other content */
 }
 
+/* Adjust video for smaller screens */
+@media (max-width: 768px) {
+  .main-section {
+    height: 70vh; /* Adjust height for tablets */
+  }
+
+  .background-video {
+    object-fit: cover; /* Keep video covering the section */
+  }
+}
+
+@media (max-width: 480px) {
+  .main-section {
+    height: 50vh; /* Reduce height further for mobile devices */
+  }
+
+  .background-video {
+    object-fit: contain; /* Adjust video to fit better without cropping on smaller screens */
+  }
+}
